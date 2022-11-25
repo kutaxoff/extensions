@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxSplitModule } from '@ng-matero/extensions/split';
+import { MtxSplitModule } from '@erengee/extensions/split';
 
 import { SplitDemoComponent } from './split-demo.component';
 

@@ -5,7 +5,7 @@ import {
   MtxGridComponent,
   MtxGridRowClassFormatter,
   MtxGridRowSelectionFormatter,
-} from '@ng-matero/extensions/grid';
+} from '@erengee/extensions/grid';
 import { EXAMPLE_DATA, EXAMPLE_DATA2 } from './data';
 import { TranslateService } from '@ngx-translate/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';

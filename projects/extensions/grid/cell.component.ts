@@ -1,5 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { MtxDialog } from '@ng-matero/extensions/dialog';
+import { MtxDialog } from '@erengee/extensions/dialog';
 import { isObservable } from 'rxjs';
 
 import { MtxGridColumn, MtxGridColumnButton } from './grid.interface';

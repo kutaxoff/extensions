@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxSelectModule } from '@ng-matero/extensions/select';
+import { MtxSelectModule } from '@erengee/extensions/select';
 
 import { SelectDemoComponent } from './select-demo.component';
 

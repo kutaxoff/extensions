@@ -1,4 +1,4 @@
-import { MtxDatetimeFormats } from '@ng-matero/extensions/core';
+import { MtxDatetimeFormats } from '@erengee/extensions/core';
 
 export const MTX_LUXON_DATETIME_FORMATS: MtxDatetimeFormats = {
   parse: {

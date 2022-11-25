@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MTX_DATETIME_FORMATS } from '@ng-matero/extensions/core';
-import { MtxDatetimepickerModule } from '@ng-matero/extensions/datetimepicker';
-import { MtxMomentDatetimeModule } from '@ng-matero/extensions-moment-adapter';
+import { MTX_DATETIME_FORMATS } from '@erengee/extensions/core';
+import { MtxDatetimepickerModule } from '@erengee/extensions/datetimepicker';
+import { MtxMomentDatetimeModule } from '@erengee/extensions-moment-adapter';
 
 import { DatetimepickerDemoComponent } from './datetimepicker-demo.component';
 

@@ -8,7 +8,7 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
-import { DatetimeAdapter } from '@ng-matero/extensions/core';
+import { DatetimeAdapter } from '@erengee/extensions/core';
 import { MtxDatetimepickerFilterType } from './datetimepicker-filtertype';
 
 export const CLOCK_RADIUS = 50;

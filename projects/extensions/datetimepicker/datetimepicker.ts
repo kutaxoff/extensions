@@ -34,7 +34,7 @@ import { _getFocusedElementPierceShadowDom } from '@angular/cdk/platform';
 import { CanColor, mixinColor, ThemePalette } from '@angular/material/core';
 import { merge, Subject, Subscription } from 'rxjs';
 import { filter, take } from 'rxjs/operators';
-import { DatetimeAdapter } from '@ng-matero/extensions/core';
+import { DatetimeAdapter } from '@erengee/extensions/core';
 import { MtxCalendarView, MtxCalendar } from './calendar';
 import { createMissingDateImplError } from './datetimepicker-errors';
 import { MtxDatetimepickerFilterType } from './datetimepicker-filtertype';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { MtxLoaderType } from '@ng-matero/extensions/loader';
+import { MtxLoaderType } from '@erengee/extensions/loader';
 
 @Component({
   selector: 'dev-loader-demo',

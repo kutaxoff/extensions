@@ -16,7 +16,7 @@ import {
   MTX_DATETIME_FORMATS,
   MtxDatetimeFormats,
   DatetimeAdapter,
-} from '@ng-matero/extensions/core';
+} from '@erengee/extensions/core';
 import { MtxDatetimepickerType } from './datetimepicker-types';
 
 /**

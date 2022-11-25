@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ColorFormat } from '@ng-matero/extensions/colorpicker';
+import { ColorFormat } from '@erengee/extensions/colorpicker';
 
 @Component({
   selector: 'color-picker-example',

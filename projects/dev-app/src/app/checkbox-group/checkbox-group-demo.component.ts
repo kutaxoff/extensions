@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UntypedFormControl, Validators } from '@angular/forms';
 
-import { MtxCheckboxGroupOption } from '@ng-matero/extensions/checkbox-group';
+import { MtxCheckboxGroupOption } from '@erengee/extensions/checkbox-group';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

@@ -3,7 +3,7 @@ import {
   MtxPopoverPositionEnd,
   MtxPopoverPositionStart,
   MtxPopoverTriggerEvent,
-} from '@ng-matero/extensions/popover';
+} from '@erengee/extensions/popover';
 
 @Component({
   selector: 'popover-example',

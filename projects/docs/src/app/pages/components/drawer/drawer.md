@@ -2,4 +2,4 @@
 
 ## API reference for Material Extensions Drawer
 
-`import { MtxDrawerModule } from '@ng-matero/extensions/drawer';`
+`import { MtxDrawerModule } from '@erengee/extensions/drawer';`

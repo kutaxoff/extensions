@@ -13,7 +13,7 @@ import {
   MTX_DATETIME_FORMATS,
   MtxDatetimeFormats,
   DatetimeAdapter,
-} from '@ng-matero/extensions/core';
+} from '@erengee/extensions/core';
 import { MtxCalendarCell } from './calendar-body';
 import { mtxDatetimepickerAnimations } from './datetimepicker-animations';
 import { createMissingDateImplError } from './datetimepicker-errors';
