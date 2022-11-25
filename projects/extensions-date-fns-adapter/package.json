@@ -1,21 +1,21 @@
 {
-  "name": "@ng-matero/extensions-date-fns-adapter",
-  "version": "14.0.1",
+  "name": "@erengee/extensions-date-fns-adapter",
+  "version": "14.1.0",
   "description": "Angular Material Extensions date-fns Adapter",
   "publishConfig": {
     "access": "public"
   },
-  "author": "Jelle Bruisten <jelle_bruisten@hotmail.com>",
+  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ng-matero/extensions.git"
+    "url": "https://github.com/kutaxoff/extensions.git"
   },
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
     "@angular/material": ">=14.0.0",
     "@angular/material-date-fns-adapter": ">=14.0.0",
-    "@ng-matero/extensions": ">=14.0.0",
+    "@erengee/extensions": ">=14.0.0",
     "date-fns": "^2.29.3"
   },
   "dependencies": {
