@@ -24,12 +24,13 @@ export interface MtxGridColumn {
   typeParameter?: MtxGridColumnTypeParameter;
   tag?: MtxGridColumnTag;
   buttons?: MtxGridColumnButton[];
-  formatter?: (rowData: any, colDef?: MtxGridColumn) => void;
+  formatter?: (rowData: any, colDef?: MtxGridColumn) => any;
   cellTemplate?: TemplateRef<any> | null;
   showExpand?: boolean;
   description?: string;
-  summary?: ((data: any[], colDef?: MtxGridColumn) => void) | string;
+  summary?: ((data: any[], colDef?: MtxGridColumn) => any) | string;
   class?: string;
+  id?: string;
 }
 
 /** Possible column pin values.  */
