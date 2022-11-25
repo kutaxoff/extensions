@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxColorpickerModule } from '@ng-matero/extensions/colorpicker';
+import { MtxColorpickerModule } from '@erengee/extensions/colorpicker';
 
 import { ColorPickerDemoComponent } from './colorpicker-demo.component';
 

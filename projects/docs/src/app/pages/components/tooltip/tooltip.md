@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Tooltip
 
-`import { MtxTooltipModule } from '@ng-matero/extensions/tooltip';`
+`import { MtxTooltipModule } from '@erengee/extensions/tooltip';`
 
 ### APIs
 

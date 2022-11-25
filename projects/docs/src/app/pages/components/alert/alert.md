@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Alert
 
-`import { MtxAlertModule } from '@ng-matero/extensions/alert';`
+`import { MtxAlertModule } from '@erengee/extensions/alert';`
 
 ### Directives
 

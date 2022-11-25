@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Dialog
 
-`import { MtxDialogModule } from '@ng-matero/extensions/dialog';`
+`import { MtxDialogModule } from '@erengee/extensions/dialog';`
 
 ### Services
 

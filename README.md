@@ -19,7 +19,7 @@ At first, you should install the Angular Material and setup it. [Learn more abou
 Install the Extensions library:
 
 ```bash
-$ npm install @ng-matero/extensions --save
+$ npm install @erengee/extensions --save
 ```
 
 ## Setup
@@ -27,8 +27,8 @@ $ npm install @ng-matero/extensions --save
 Import the modules you need, e.g. data-grid and select.
 
 ```ts
-import { MtxGridModule } from '@ng-matero/extensions/grid';
-import { MtxSelectModule } from '@ng-matero/extensions/select';
+import { MtxGridModule } from '@erengee/extensions/grid';
+import { MtxSelectModule } from '@erengee/extensions/select';
 
 @NgModule({
   ...
@@ -44,7 +44,7 @@ export class YourAppModule {
 After import modules, you must define a theme. [More details about theming](https://material.angular.io/guide/theming).
 
 ```scss
-@use '@ng-matero/extensions' as mtx;
+@use '@erengee/extensions' as mtx;
 
 @include mtx.all-component-themes($theme);
 @include mtx.all-experimental-component-themes($theme);

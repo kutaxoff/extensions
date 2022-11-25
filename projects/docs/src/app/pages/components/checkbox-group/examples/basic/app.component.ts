@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MtxCheckboxGroupOption } from '@ng-matero/extensions/checkbox-group';
+import { MtxCheckboxGroupOption } from '@erengee/extensions/checkbox-group';
 
 @Component({
   selector: 'checkbox-group-example',

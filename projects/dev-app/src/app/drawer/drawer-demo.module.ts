@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxDrawerModule } from '@ng-matero/extensions/drawer';
+import { MtxDrawerModule } from '@erengee/extensions/drawer';
 
 import { DrawerDemoComponent } from './drawer-demo.component';
 import { DrawerOverviewComponent } from './drawer-demo.component';

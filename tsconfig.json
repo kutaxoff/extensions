@@ -20,14 +20,14 @@
     "types": ["jasmine"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "@ng-matero/extensions": ["projects/extensions"],
-      "@ng-matero/extensions/*": ["projects/extensions/*"],
-      "@ng-matero/extensions-moment-adapter": ["projects/extensions-moment-adapter"],
-      "@ng-matero/extensions-moment-adapter/*": ["projects/extensions-moment-adapter/*"],
-      "@ng-matero/extensions-luxon-adapter": ["projects/extensions-luxon-adapter"],
-      "@ng-matero/extensions-luxon-adapter/*": ["projects/extensions-luxon-adapter/*"],
-      "@ng-matero/extensions-date-fns-adapter": ["projects/extensions-date-fns-adapter"],
-      "@ng-matero/extensions-date-fns-adapter/*": ["projects/extensions-date-fns-adapter/*"]
+      "@erengee/extensions": ["projects/extensions"],
+      "@erengee/extensions/*": ["projects/extensions/*"],
+      "@erengee/extensions-moment-adapter": ["projects/extensions-moment-adapter"],
+      "@erengee/extensions-moment-adapter/*": ["projects/extensions-moment-adapter/*"],
+      "@erengee/extensions-luxon-adapter": ["projects/extensions-luxon-adapter"],
+      "@erengee/extensions-luxon-adapter/*": ["projects/extensions-luxon-adapter/*"],
+      "@erengee/extensions-date-fns-adapter": ["projects/extensions-date-fns-adapter"],
+      "@erengee/extensions-date-fns-adapter/*": ["projects/extensions-date-fns-adapter/*"]
     }
   },
   "angularCompilerOptions": {

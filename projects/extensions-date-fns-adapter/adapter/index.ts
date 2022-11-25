@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { DateFnsModule, MatDateFnsModule } from '@angular/material-date-fns-adapter';
-import { DatetimeAdapter, MTX_DATETIME_FORMATS } from '@ng-matero/extensions/core';
+import { DatetimeAdapter, MTX_DATETIME_FORMATS } from '@erengee/extensions/core';
 import { DateFnsDateTimeAdapter } from './date-fns-adapter';
 import { MTX_DATE_FNS_FORMATS } from './date-fns-formats';
 

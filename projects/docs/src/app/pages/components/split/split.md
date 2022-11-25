@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions split
 
-`import { MtxSplitModule } from '@ng-matero/extensions/split';`
+`import { MtxSplitModule } from '@erengee/extensions/split';`
 
 ### APIs
 

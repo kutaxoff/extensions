@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions colorpicker
 
-`import { MtxColorpickerModule } from '@ng-matero/extensions/colorpicker';`
+`import { MtxColorpickerModule } from '@erengee/extensions/colorpicker';`
 
 ### Directives
 

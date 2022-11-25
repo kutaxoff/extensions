@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Loader
 
-`import { MtxLoaderModule } from '@ng-matero/extensions/loader';`
+`import { MtxLoaderModule } from '@erengee/extensions/loader';`
 
 ### Directives
 
