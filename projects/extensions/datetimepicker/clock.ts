@@ -144,7 +144,6 @@ export class MtxClock<D> implements AfterContentInit {
   /** Whether the clock should be started in hour or minute view. */
   @Input()
   set startView(value: MtxClockView) {
-    console.trace(value);
     this._hourView = value === 'hour';
     this._secondView = value === 'second';
   }
