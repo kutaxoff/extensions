@@ -7,6 +7,8 @@ export const MTX_LUXON_DATETIME_FORMATS: MtxDatetimeFormats = {
     yearInput: 'yyyy',
     datetimeInput: 'f',
     timeInput: 't',
+    datetimesecondsInput: 'F',
+    timesecondsInput: 'tt',
   },
   display: {
     dateInput: 'D',
@@ -14,6 +16,8 @@ export const MTX_LUXON_DATETIME_FORMATS: MtxDatetimeFormats = {
     yearInput: 'yyyy',
     datetimeInput: 'f',
     timeInput: 't',
+    datetimesecondsInput: 'F',
+    timesecondsInput: 'tt',
     monthYearLabel: 'yyyy',
     dateA11yLabel: 'DDD',
     monthYearA11yLabel: 'LLLL yyyy',

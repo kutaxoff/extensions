@@ -1,21 +1,21 @@
 {
   "name": "@erengee/extensions-luxon-adapter",
-  "version": "14.0.3",
+  "version": "14.1.0",
   "description": "Angular Material Extensions Luxon Adapter",
   "publishConfig": {
     "access": "public"
   },
-  "author": "Jelle Bruisten <jelle_bruisten@hotmail.com>",
+  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erengee/extensions.git"
+    "url": "https://github.com/kutaxoff/extensions.git"
   },
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
     "@angular/material": ">=14.0.0",
     "@angular/material-luxon-adapter": ">=14.0.0",
-    "@ng-matero/extensions": ">=14.0.0",
+    "@erengee/extensions": ">=14.0.0",
     "luxon": ">=2.5.0"
   },
   "dependencies": {
