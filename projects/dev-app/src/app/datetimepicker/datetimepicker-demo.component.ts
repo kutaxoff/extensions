@@ -47,6 +47,8 @@ export class DatetimepickerDemoComponent implements OnInit, OnDestroy {
           return date.hour() % 2 === 0;
         case MtxDatetimepickerFilterType.MINUTE:
           return date.minute() % 2 === 0;
+        case MtxDatetimepickerFilterType.SECOND:
+          return date.second() % 2 === 0;
       }
     };
 

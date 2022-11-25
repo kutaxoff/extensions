@@ -28,7 +28,7 @@ export const CLOCK_OUTER_RADIUS = 41.25;
 export const CLOCK_TICK_RADIUS = 7.0833;
 
 /** Possible views for datetimepicker clock. */
-export type MtxClockView = 'hour' | 'minute';
+export type MtxClockView = 'hour' | 'minute' | 'second';
 
 /**
  * A clock that is used as part of the datetimepicker.
@@ -61,6 +61,9 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
   /** Whether the time is now in AM or PM. */
   @Input() AMPM: MtxAMPM = 'AM';
 
+  /** Whether the clock allows to pick seconds. */
+  @Input() withSeconds: boolean = false;
+
   /** Emits when the currently selected date changes. */
   @Output() selectedChange = new EventEmitter<D>();
 
@@ -70,16 +73,24 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
   /** Emits when any date is selected. */
   @Output() readonly _userSelection = new EventEmitter<void>();
 
-  /** Whether the clock is in hour view. */
-  _hourView: boolean = true;
-
+  /** Hours, Minutes and Seconds representing the clock view. */
   _hours: any[] = [];
 
   _minutes: any[] = [];
 
+  _seconds: any[] = [];
+
+  /** Whether the clock is in hour view. */
+  _hourView: boolean = true;
+
+  /** Whether the clock is in second view. */
+  _secondView: boolean = false;
+
   _selectedHour!: number;
 
   _selectedMinute!: number;
+
+  _selectedSecond!: number;
 
   private _timeChanged = false;
 
@@ -142,13 +153,16 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
   /** Whether the clock should be started in hour or minute view. */
   @Input()
   set startView(value: MtxClockView) {
-    this._hourView = value !== 'minute';
+    console.trace(value);
+    this._hourView = value === 'hour';
+    this._secondView = value === 'second';
   }
 
   get _hand() {
     const hour = this._adapter.getHour(this.activeDate);
     this._selectedHour = hour;
     this._selectedMinute = this._adapter.getMinute(this.activeDate);
+    this._selectedSecond = this._adapter.getSecond(this.activeDate);
     let deg = 0;
     let radius = CLOCK_OUTER_RADIUS;
     if (this._hourView) {
@@ -158,8 +172,10 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
         radius = CLOCK_OUTER_RADIUS;
       }
       deg = Math.round(this._selectedHour * (360 / (24 / 2)));
-    } else {
+    } else if (!this._secondView) {
       deg = Math.round(this._selectedMinute * (360 / 60));
+    } else {
+      deg = Math.round(this._selectedSecond * (360 / 60));
     }
     return {
       height: `${radius}%`,
@@ -209,7 +225,9 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
     if (this._timeChanged) {
       this.selectedChange.emit(this.activeDate);
       if (!this._hourView) {
-        this._userSelection.emit();
+        if ((this.withSeconds && this._secondView) || !this.withSeconds) {
+          this._userSelection.emit();
+        }
       }
     }
   };
@@ -244,9 +262,12 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
   private _init() {
     this._hours.length = 0;
     this._minutes.length = 0;
+    this._seconds.length = 0;
 
     const hourNames = this._adapter.getHourNames();
     const minuteNames = this._adapter.getMinuteNames();
+    const secondNames = this._adapter.getSecondNames();
+
     if (this.twelvehour) {
       const hours = [];
       for (let i = 0; i < hourNames.length; i++) {
@@ -259,6 +280,7 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
           this._adapter.getMonth(this.activeDate),
           this._adapter.getDate(this.activeDate),
           hour,
+          0,
           0
         );
 
@@ -294,6 +316,7 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
           this._adapter.getMonth(this.activeDate),
           this._adapter.getDate(this.activeDate),
           i,
+          0,
           0
         );
 
@@ -321,7 +344,8 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
         this._adapter.getMonth(this.activeDate),
         this._adapter.getDate(this.activeDate),
         this._adapter.getHour(this.activeDate),
-        i
+        i,
+        0
       );
       const enabled =
         (!this.minDate || this._adapter.compareDatetime(date, this.minDate) >= 0) &&
@@ -330,6 +354,29 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
       this._minutes.push({
         value: i,
         displayValue: i === 0 ? '00' : minuteNames[i],
+        enabled,
+        top: CLOCK_RADIUS - Math.cos(radian) * CLOCK_OUTER_RADIUS - CLOCK_TICK_RADIUS,
+        left: CLOCK_RADIUS + Math.sin(radian) * CLOCK_OUTER_RADIUS - CLOCK_TICK_RADIUS,
+      });
+    }
+
+    for (let i = 0; i < secondNames.length; i += 5) {
+      const radian = (i / 30) * Math.PI;
+      const date = this._adapter.createDatetime(
+        this._adapter.getYear(this.activeDate),
+        this._adapter.getMonth(this.activeDate),
+        this._adapter.getDate(this.activeDate),
+        this._adapter.getHour(this.activeDate),
+        this._adapter.getMinute(this.activeDate),
+        i
+      );
+      const enabled =
+        (!this.minDate || this._adapter.compareDatetime(date, this.minDate) >= 0) &&
+        (!this.maxDate || this._adapter.compareDatetime(date, this.maxDate) <= 0) &&
+        (!this.dateFilter || this.dateFilter(date, MtxDatetimepickerFilterType.SECOND));
+      this._seconds.push({
+        value: i,
+        displayValue: i === 0 ? '00' : secondNames[i],
         enabled,
         top: CLOCK_RADIUS - Math.cos(radian) * CLOCK_OUTER_RADIUS - CLOCK_TICK_RADIUS,
         left: CLOCK_RADIUS + Math.sin(radian) * CLOCK_OUTER_RADIUS - CLOCK_TICK_RADIUS,
@@ -384,7 +431,23 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
         this._adapter.getMonth(this.activeDate),
         this._adapter.getDate(this.activeDate),
         value,
-        this._adapter.getMinute(this.activeDate)
+        this._adapter.getMinute(this.activeDate),
+        this._adapter.getSecond(this.activeDate)
+      );
+    } else if (!this._secondView) {
+      if (this.interval) {
+        value *= this.interval;
+      }
+      if (value === 60) {
+        value = 0;
+      }
+      date = this._adapter.createDatetime(
+        this._adapter.getYear(this.activeDate),
+        this._adapter.getMonth(this.activeDate),
+        this._adapter.getDate(this.activeDate),
+        this._adapter.getHour(this.activeDate),
+        value,
+        this._adapter.getSecond(this.activeDate)
       );
     } else {
       if (this.interval) {
@@ -398,6 +461,7 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
         this._adapter.getMonth(this.activeDate),
         this._adapter.getDate(this.activeDate),
         this._adapter.getHour(this.activeDate),
+        this._adapter.getMinute(this.activeDate),
         value
       );
     }
@@ -409,6 +473,7 @@ export class MtxClock<D> implements AfterContentInit, OnDestroy, OnChanges {
   }
 
   static ngAcceptInputType_twelvehour: BooleanInput;
+  static ngAcceptInputType_withSeconds: BooleanInput;
 }
 
 /** Returns whether an event is a touch event. */

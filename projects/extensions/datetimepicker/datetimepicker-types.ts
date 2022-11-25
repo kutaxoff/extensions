@@ -1,5 +1,11 @@
 /** Possible types for datetimepicker. */
-export type MtxDatetimepickerType = 'date' | 'time' | 'month' | 'year' | 'datetime';
+export type MtxDatetimepickerType =
+  | 'date'
+  | 'time'
+  | 'month'
+  | 'year'
+  | 'datetime'
+  | 'datetimeseconds';
 
 /** Possible views for datetimepicker calendar. */
 export type MtxCalendarView = 'clock' | 'month' | 'year' | 'multi-year';

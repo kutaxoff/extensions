@@ -2,7 +2,8 @@
   <mat-form-field>
     <mat-placeholder>DateTime</mat-placeholder>
     <mtx-datetimepicker-toggle [for]="datetimePicker" matSuffix></mtx-datetimepicker-toggle>
-    <mtx-datetimepicker #datetimePicker startView="month" [timeInterval]="5"></mtx-datetimepicker>
+    <mtx-datetimepicker #datetimePicker startView="month" [timeInterval]="5"
+                        type="datetimeseconds"></mtx-datetimepicker>
     <input [mtxDatetimepicker]="datetimePicker" [max]="tomorrow" [min]="today"
            autocomplete="false" formControlName="dateTime" matInput required>
     <mat-error *ngIf="group.get('dateTime')?.errors?.required">required</mat-error>

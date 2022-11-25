@@ -1,14 +1,14 @@
 {
-  "name": "@ng-matero/extensions",
+  "name": "@erengee/extensions",
   "version": "14.7.0",
   "description": "Angular Material Extensions",
   "publishConfig": {
     "access": "public"
   },
-  "author": "nzbin<nzb329@163.com>",
+  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ng-matero/extensions.git"
+    "url": "https://github.com/kutaxoff/extensions.git"
   },
   "keywords": [
     "angular",
@@ -16,6 +16,7 @@
     "angular-components",
     "angular-material-extensions",
     "ng-matero",
+    "erengee",
     "data-grid",
     "ngx-data-grid",
     "material-data-table",
@@ -31,7 +32,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ng-matero/extensions/issues"
+    "url": "https://github.com/kutaxoff/extensions/issues"
   },
   "homepage": "https://ng-matero.github.io/extensions/",
   "exports": {

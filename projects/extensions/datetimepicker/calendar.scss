@@ -104,6 +104,7 @@ $landscape-calendar-header-width: 144px;
 .mtx-calendar-header-date,
 .mtx-calendar-header-hours,
 .mtx-calendar-header-minutes,
+.mtx-calendar-header-seconds,
 .mtx-calendar-header-ampm {
   &:not(.active) {
     opacity: .6;
@@ -122,6 +123,7 @@ $landscape-calendar-header-width: 144px;
 
     .mtx-calendar-header-hours,
     .mtx-calendar-header-minutes,
+    .mtx-calendar-header-seconds,
     .mtx-calendar-header-ampm {
       opacity: 1;
     }

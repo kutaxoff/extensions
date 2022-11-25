@@ -18,7 +18,7 @@
             [class.not-clickable]="type === 'month'"
             [attr.aria-label]="_dateButtonLabel"
             (click)="_dateClicked()">{{ _dateButtonText }}</button>
-    <span *ngIf="type.endsWith('time')" class="mtx-calendar-header-time"
+    <span *ngIf="type.endsWith('time') || type.endsWith('seconds')" class="mtx-calendar-header-time"
           [class.active]="currentView === 'clock'">
       <span class="mtx-calendar-header-hour-minute-container">
         <button mat-button type="button" class="mtx-calendar-header-hours"
@@ -30,6 +30,13 @@
                 [class.active]="_clockView === 'minute'"
                 [attr.aria-label]="_minuteButtonLabel"
                 (click)="_minutesClicked()">{{ _minutesButtonText }}</button>
+        <ng-container *ngIf="_withSeconds">
+            <span class="mtx-calendar-header-hour-minute-separator">:</span>
+            <button mat-button type="button" class="mtx-calendar-header-seconds"
+                [class.active]="_clockView === 'second'"
+                [attr.aria-label]="_secondButtonLabel"
+                (click)="_secondsClicked()">{{ _secondsButtonText }}</button>
+            </ng-container>
       </span>
       <span *ngIf="twelvehour" class="mtx-calendar-header-ampm-container">
         <button mat-button type="button" class="mtx-calendar-header-ampm"
@@ -129,7 +136,8 @@
                  [minDate]="minDate"
                  [selected]="_activeDate"
                  [startView]="_clockView"
-                 [twelvehour]="twelvehour">
+                 [twelvehour]="twelvehour"
+                 [withSeconds]="type === 'datetimeseconds'">
       </mtx-clock>
     </ng-template>
   </ng-container>

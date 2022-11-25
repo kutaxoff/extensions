@@ -29,6 +29,8 @@ import { DatetimepickerDemoComponent } from './datetimepicker-demo.component';
           yearInput: 'YYYY',
           timeInput: 'HH:mm',
           datetimeInput: 'YYYY-MM-DD HH:mm',
+          timesecondsInput: 'HH:mm:ss',
+          datetimesecondsInput: 'YYYY-MM-DD HH:mm:ss',
         },
         display: {
           dateInput: 'YYYY-MM-DD',
@@ -36,6 +38,8 @@ import { DatetimepickerDemoComponent } from './datetimepicker-demo.component';
           yearInput: 'YYYY',
           timeInput: 'HH:mm',
           datetimeInput: 'YYYY-MM-DD HH:mm',
+          timesecondsInput: 'HH:mm:ss',
+          datetimesecondsInput: 'YYYY-MM-DD HH:mm:ss',
           monthYearLabel: 'YYYY MMMM',
           dateA11yLabel: 'LL',
           monthYearA11yLabel: 'MMMM YYYY',
