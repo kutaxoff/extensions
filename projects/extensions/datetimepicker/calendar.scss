@@ -68,6 +68,7 @@ $calendar-next-icon-transform: translateX(-2px) rotate(45deg);
 .mtx-calendar-header-date,
 .mtx-calendar-header-hours,
 .mtx-calendar-header-minutes,
+.mtx-calendar-header-seconds,
 .mtx-calendar-header-ampm {
   &:not(.active) {
     cursor: pointer;
@@ -87,6 +88,7 @@ $calendar-next-icon-transform: translateX(-2px) rotate(45deg);
 
     .mtx-calendar-header-hours,
     .mtx-calendar-header-minutes,
+    .mtx-calendar-header-seconds,
     .mtx-calendar-header-ampm {
       cursor: pointer;
       opacity: 1;

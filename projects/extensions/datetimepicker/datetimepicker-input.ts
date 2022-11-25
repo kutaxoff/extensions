@@ -114,6 +114,7 @@ export class MtxDatetimepickerInput<D>
     @Optional() @Inject(MTX_DATETIME_FORMATS) private _dateFormats: MtxDatetimeFormats,
     @Optional() private _formField: MatFormField
   ) {
+    console.log(_dateFormats);
     if (!this._dateAdapter) {
       throw createMissingDateImplError('DatetimeAdapter');
     }
@@ -316,6 +317,9 @@ export class MtxDatetimepickerInput<D>
         return this._dateFormats.display.dateInput;
       case 'datetime':
         return this._dateFormats.display.datetimeInput;
+      case 'datetimeseconds':
+        console.log(this._dateFormats.display.datetimesecondsInput);
+        return this._dateFormats.display.datetimesecondsInput;
       case 'time':
         return this._dateFormats.display.timeInput;
       case 'month':
@@ -334,6 +338,9 @@ export class MtxDatetimepickerInput<D>
         break;
       case 'datetime':
         parseFormat = this._dateFormats.parse.datetimeInput;
+        break;
+      case 'datetimeseconds':
+        parseFormat = this._dateFormats.parse.datetimesecondsInput;
         break;
       case 'time':
         parseFormat = this._dateFormats.parse.timeInput;

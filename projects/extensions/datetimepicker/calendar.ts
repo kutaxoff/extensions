@@ -102,6 +102,8 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
 
   @Output() _userSelection = new EventEmitter<void>();
 
+  _withSeconds = false;
+
   _AMPM!: string;
 
   _clockView: MtxClockView = 'hour';
@@ -140,6 +142,9 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
     this._type = value || 'date';
     if (this.type === 'year') {
       this.multiYearSelector = true;
+    }
+    if (this.type === 'datetimeseconds') {
+      this._withSeconds = true;
     }
   }
   private _type: MtxDatetimepickerType = 'date';
@@ -270,6 +275,10 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
     return this._2digit(this._adapter.getMinute(this._activeDate));
   }
 
+  get _secondsLabel(): string {
+    return this._2digit(this._adapter.getSecond(this._activeDate));
+  }
+
   get _ariaLabelNext(): string {
     switch (this._currentView) {
       case 'month':
@@ -366,6 +375,7 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
           0,
           1,
           0,
+          0,
           0
         );
         this.selectedChange.emit(normalizedDate);
@@ -377,9 +387,12 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
   }
 
   _timeSelected(date: D): void {
-    if (this._clockView !== 'minute') {
+    if (this._clockView === 'hour') {
       this._activeDate = this._updateDate(date);
       this._clockView = 'minute';
+    } else if (this._clockView === 'minute' && this._withSeconds) {
+      this._activeDate = this._updateDate(date);
+      this._clockView = 'second';
     } else {
       if (!this._adapter.sameDatetime(date, this.selected) || !this.preventSameDateTimeSelection) {
         this.selectedChange.emit(date);
@@ -447,6 +460,11 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
   _minutesClicked(): void {
     this.currentView = 'clock';
     this._clockView = 'minute';
+  }
+
+  _secondsClicked(): void {
+    this.currentView = 'clock';
+    this._clockView = 'second';
   }
 
   /** Handles user clicks on the previous button. */
@@ -686,16 +704,22 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
   private _handleCalendarBodyKeydownInClockView(event: KeyboardEvent): void {
     switch (event.keyCode) {
       case UP_ARROW:
-        this._activeDate =
-          this._clockView === 'hour'
-            ? this._adapter.addCalendarHours(this._activeDate, 1)
-            : this._adapter.addCalendarMinutes(this._activeDate, 1);
+        if (this._clockView === 'hour') {
+          this._activeDate = this._adapter.addCalendarHours(this._activeDate, 1);
+        } else if (this._clockView === 'minute') {
+          this._activeDate = this._adapter.addCalendarMinutes(this._activeDate, 1);
+        } else if (this._clockView === 'second') {
+          this._activeDate = this._adapter.addCalendarSeconds(this._activeDate, 1);
+        }
         break;
       case DOWN_ARROW:
-        this._activeDate =
-          this._clockView === 'hour'
-            ? this._adapter.addCalendarHours(this._activeDate, -1)
-            : this._adapter.addCalendarMinutes(this._activeDate, -1);
+        if (this._clockView === 'hour') {
+          this._activeDate = this._adapter.addCalendarHours(this._activeDate, -1);
+        } else if (this._clockView === 'minute') {
+          this._activeDate = this._adapter.addCalendarMinutes(this._activeDate, -1);
+        } else if (this._clockView === 'second') {
+          this._activeDate = this._adapter.addCalendarSeconds(this._activeDate, -1);
+        }
         break;
       case ENTER:
         this._timeSelected(this._activeDate);

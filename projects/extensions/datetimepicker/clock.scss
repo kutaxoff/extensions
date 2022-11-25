@@ -51,7 +51,8 @@ $clock-cell-size: 14.1666% !default;
 }
 
 .mtx-clock-hours,
-.mtx-clock-minutes {
+.mtx-clock-minutes,
+.mtx-clock-seconds {
   position: absolute;
   top: 0;
   left: 0;
@@ -69,7 +70,8 @@ $clock-cell-size: 14.1666% !default;
   }
 }
 
-.mtx-clock-minutes {
+.mtx-clock-minutes,
+.mtx-clock-seconds {
   transform: scale(.8);
 }
 
