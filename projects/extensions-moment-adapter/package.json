@@ -1,21 +1,21 @@
 {
-  "name": "@ng-matero/extensions-moment-adapter",
-  "version": "14.0.2",
+  "name": "@erengee/extensions-moment-adapter",
+  "version": "14.1.0",
   "description": "Angular Material Extensions Moment Adapter",
   "publishConfig": {
     "access": "public"
   },
-  "author": "nzbin<nzb329@163.com>",
+  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ng-matero/extensions.git"
+    "url": "https://github.com/kutaxoff/extensions.git"
   },
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": ">=14.0.0",
     "@angular/material": ">=14.0.0",
     "@angular/material-moment-adapter": ">=14.0.0",
-    "@ng-matero/extensions": ">=14.0.0",
+    "@erengee/extensions": ">=14.0.0",
     "moment": "^2.29.3"
   },
   "dependencies": {
