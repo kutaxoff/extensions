@@ -7,6 +7,8 @@ export const MTX_DATE_FNS_FORMATS: MtxDatetimeFormats = {
     yearInput: 'yyyy',
     datetimeInput: 'P p',
     timeInput: 'p',
+    datetimesecondsInput: 'P pp',
+    timesecondsInput: 'pp',
   },
   display: {
     dateInput: 'P',
@@ -14,6 +16,8 @@ export const MTX_DATE_FNS_FORMATS: MtxDatetimeFormats = {
     yearInput: 'yyyy',
     datetimeInput: 'P p',
     timeInput: 'p',
+    datetimesecondsInput: 'P pp',
+    timesecondsInput: 'pp',
     monthYearLabel: 'yyyy',
     dateA11yLabel: 'LLLL dd, yyyy',
     monthYearA11yLabel: 'MMMM yyyy',
