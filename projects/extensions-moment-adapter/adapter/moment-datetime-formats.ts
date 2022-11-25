@@ -7,6 +7,8 @@ export const MTX_MOMENT_DATETIME_FORMATS: MtxDatetimeFormats = {
     yearInput: 'YYYY',
     datetimeInput: 'L LT',
     timeInput: 'LT',
+    datetimesecondsInput: 'L LTS',
+    timesecondsInput: 'LTS',
   },
   display: {
     dateInput: 'L',
@@ -14,6 +16,8 @@ export const MTX_MOMENT_DATETIME_FORMATS: MtxDatetimeFormats = {
     yearInput: 'YYYY',
     datetimeInput: 'L LT',
     timeInput: 'LT',
+    datetimesecondsInput: 'L LTS',
+    timesecondsInput: 'LTS',
     monthYearLabel: 'MMM YYYY',
     dateA11yLabel: 'LL',
     monthYearA11yLabel: 'MMMM YYYY',
