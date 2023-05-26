@@ -1,6 +1,6 @@
 {
   "name": "@erengee/extensions-date-fns-adapter",
-  "version": "14.1.0",
+  "version": "14.1.1",
   "description": "Angular Material Extensions date-fns Adapter",
   "publishConfig": {
     "access": "public"
