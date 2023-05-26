@@ -50,7 +50,8 @@ import { MtxDatetimepickerIntl } from './datetimepicker-intl';
   styleUrls: ['calendar.scss'],
   host: {
     'class': 'mtx-calendar',
-    '[class.mtx-calendar-with-time-input]': 'timeInput',
+    '[class.mtx-calendar-with-time-input]': 'timeInput && !withSeconds',
+    '[class.mtx-calendar-with-time-input-seconds]': 'timeInput && withSeconds',
     'tabindex': '0',
     '(keydown)': '_handleCalendarBodyKeydown($event)',
   },
@@ -100,9 +101,13 @@ export class MtxCalendar<D> implements AfterContentInit, OnDestroy {
 
   @Output() _userSelection = new EventEmitter<void>();
 
+  get withSeconds(): boolean {
+    return this._withSeconds;
+  }
+
   _withSeconds = false;
 
-  _AMPM!: string;
+  _AMPM!: MtxAMPM;
 
   _clockView: MtxClockView = 'hour';
 

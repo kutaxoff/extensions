@@ -15,7 +15,7 @@
     "@angular/core": "14",
     "@angular/material": "14",
     "@angular/material-date-fns-adapter": "14",
-    "@erengee/extensions": ">=14.0.0",
+    "@erengee/extensions": "14",
     "date-fns": "^2.29.3"
   },
   "dependencies": {

@@ -264,6 +264,12 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
   @ViewChild('minuteInput', { read: MtxTimeInput })
   protected minuteInputDirective: MtxTimeInput | undefined;
 
+  @ViewChild('secondInput', { read: ElementRef<HTMLInputElement> })
+  protected secondInputElement: ElementRef<HTMLInputElement> | undefined;
+
+  @ViewChild('secondInput', { read: MtxTimeInput })
+  protected secondInputDirective: MtxTimeInput | undefined;
+
   datetimepickerIntlChangesSubscription: SubscriptionLike;
 
   /** Whether the clock uses 12 hour format. */
@@ -275,6 +281,16 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
     this._twelvehour = coerceBooleanProperty(value);
   }
   private _twelvehour = false;
+
+  /** Whether the clock has seconds. */
+  @Input()
+  get withSeconds(): boolean {
+    return this._withSeconds;
+  }
+  set withSeconds(value: boolean) {
+    this._withSeconds = coerceBooleanProperty(value);
+  }
+  private _withSeconds = false;
 
   /** Whether the time is now in AM or PM. */
   @Input() AMPM: MtxAMPM = 'AM';
@@ -341,7 +357,11 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
   }
 
   get isMinuteView() {
-    return this._clockView === 'hour';
+    return this._clockView === 'minute';
+  }
+
+  get isSecondView() {
+    return this._clockView === 'second';
   }
 
   get hour() {
@@ -368,6 +388,14 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
   get minute() {
     if (this.activeDate) {
       return this.prefixWithZero(this._adapter.getMinute(this.activeDate));
+    }
+
+    return '00';
+  }
+
+  get second() {
+    if (this.activeDate) {
+      return this.prefixWithZero(this._adapter.getSecond(this.activeDate));
     }
 
     return '00';
@@ -405,9 +433,13 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
   }
 
   focusInputElement() {
-    if (this.clockView === 'hour') {
+    if (this.isHourView) {
       if (this.hourInputElement) {
         (this.hourInputElement.nativeElement as HTMLInputElement).focus();
+      }
+    } else if (this.isSecondView) {
+      if (this.secondInputElement) {
+        (this.secondInputElement.nativeElement as HTMLInputElement).focus();
       }
     } else {
       if (this.minuteInputElement) {
@@ -424,7 +456,8 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
         this._adapter.getMonth(this.activeDate),
         this._adapter.getDate(this.activeDate),
         this.updateHourForAmPm(hour),
-        this._adapter.getMinute(this.activeDate)
+        this._adapter.getMinute(this.activeDate),
+        this._adapter.getSecond(this.activeDate)
       );
 
       this._activeDate = this._adapter.clampDate(newValue, this.minDate, this.maxDate);
@@ -471,7 +504,8 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
         this._adapter.getMonth(this.activeDate),
         this._adapter.getDate(this.activeDate),
         this._adapter.getHour(this._activeDate),
-        minute
+        minute,
+        this._adapter.getSecond(this.activeDate)
       );
       this._activeDate = this._adapter.clampDate(newValue, this.minDate, this.maxDate);
       this.activeDateChange.emit(this.activeDate);
@@ -486,14 +520,40 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
     }
   }
 
+  handleSecondInputChange(value: NumberInput) {
+    const second = coerceNumberProperty(value);
+    if (second || second === 0) {
+      const newValue = this._adapter.createDatetime(
+        this._adapter.getYear(this.activeDate),
+        this._adapter.getMonth(this.activeDate),
+        this._adapter.getDate(this.activeDate),
+        this._adapter.getHour(this._activeDate),
+        this._adapter.getMinute(this.activeDate),
+        second
+      );
+      this._activeDate = this._adapter.clampDate(newValue, this.minDate, this.maxDate);
+      this.activeDateChange.emit(this.activeDate);
+
+      // If previously we did set [mtxValue]="40" and the input changed to 30, and the clamping
+      // will make it "40" again then the minuteInputDirective will not have been updated
+      // since "40" === "40" same reference so no change detected by directly setting it within
+      // this handler, we handle this usecase
+      if (this.secondInputDirective) {
+        this.secondInputDirective.timeValue = this.second;
+      }
+    }
+  }
+
   handleFocus(clockView: MtxClockView) {
     this.clockView = clockView;
     this.clockViewChange.emit(clockView);
   }
 
   _timeSelected(date: D): void {
-    if (this.clockView === 'hour') {
+    if (this.isHourView) {
       this.clockView = 'minute';
+    } else if (this.isMinuteView && this.withSeconds) {
+      this.clockView = 'second';
     }
     this._activeDate = this.selected = date;
   }

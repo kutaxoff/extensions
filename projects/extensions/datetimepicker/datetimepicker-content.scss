@@ -6,6 +6,10 @@ $non-touch-calendar-landscape-width: 432px;
 $non-touch-calendar-landscape-height: 328px;
 $non-touch-calendar-with-time-input-portrait-height: 490px;
 $non-touch-calendar-with-time-input-landscape-height: 404px;
+$non-touch-calendar-with-time-input-seconds-landscape-width: 484px;
+$non-touch-calendar-with-time-input-seconds-landscape-height: 456px;
+$non-touch-calendar-with-time-input-seconds-portrait-width: $non-touch-calendar-portrait-width + 36px;
+$non-touch-calendar-with-time-input-seconds-portrait-height: $non-touch-calendar-with-time-input-portrait-height + 36px;
 
 // Ideally the calendar would have a constant aspect ratio, no matter its size, and we would base
 // these measurements off the aspect ratio. Unfortunately, the aspect ratio does change a little as
@@ -34,6 +38,11 @@ $touch-max-height: 850px;
     &.mtx-calendar-with-time-input {
       height: $non-touch-calendar-with-time-input-landscape-height;
     }
+
+    &.mtx-calendar-with-time-input-seconds {
+      width: $non-touch-calendar-with-time-input-seconds-landscape-width;
+      height: $non-touch-calendar-with-time-input-seconds-landscape-height;
+    }
   }
 }
 
@@ -56,6 +65,11 @@ $touch-max-height: 850px;
 
   &.mtx-calendar-with-time-input {
     height: $non-touch-calendar-with-time-input-portrait-height;
+  }
+
+  &.mtx-calendar-with-time-input-seconds {
+    width: $non-touch-calendar-with-time-input-seconds-portrait-width;
+    height: $non-touch-calendar-with-time-input-seconds-portrait-height;
   }
 }
 

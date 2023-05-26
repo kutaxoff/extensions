@@ -115,9 +115,9 @@ export class MomentDatetimeAdapter extends DatetimeAdapter<Moment> {
 
     let result = moment({ year, month, date, hour, minute, second });
     if (this._useUtc) {
-      result = moment.utc({ year, month, date, hour, minute });
+      result = moment.utc({ year, month, date, hour, minute, second });
     } else {
-      result = moment({ year, month, date, hour, minute });
+      result = moment({ year, month, date, hour, minute, second });
     }
 
     // If the result isn't valid, the date must have been out of bounds for this month.

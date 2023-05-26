@@ -122,7 +122,8 @@
               [interval]="timeInterval"
               [maxDate]="maxDate"
               [minDate]="minDate"
-              [selected]="_activeDate">
+              [selected]="_activeDate"
+              [withSeconds]="type === 'datetimeseconds'">
     </mtx-time>
 
     <ng-template #clock>

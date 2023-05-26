@@ -29,6 +29,26 @@
            [timeInterval]="interval"
            (focus)="handleFocus('minute')" />
 
+    <ng-container *ngIf="withSeconds">
+
+        <div class="mtx-time-seperator">:</div>
+
+        <input class="mtx-time-input"
+           [class.mtx-time-input-active]="clockView === 'second'"
+           [class.mtx-time-input-warning]="!secondInput.valid"
+           #secondInput="mtxTimeInput"
+           type="text"
+           inputmode="numeric"
+           maxlength="2"
+           [timeMin]="0"
+           [timeMax]="59"
+           [timeValue]="second"
+           (timeValueChanged)="handleSecondInputChange($event)"
+           [timeInterval]="interval"
+           (focus)="handleFocus('second')" />
+
+    </ng-container>
+
     <div *ngIf="twelvehour" class="mtx-time-ampm">
       <button mat-button type="button" class="mtx-time-am"
               [class.mtx-time-ampm-active]="AMPM === 'AM'" aria-label="AM"
