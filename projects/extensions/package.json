@@ -1,6 +1,6 @@
 {
   "name": "@erengee/extensions",
-  "version": "14.7.1",
+  "version": "14.7.2",
   "description": "Angular Material Extensions",
   "publishConfig": {
     "access": "public"
