@@ -6,9 +6,15 @@ $time-seperator-width: 24px;
 $time-ampm-width: 40px;
 
 .mtx-time {
-  display: block;
+  display: flex;
+  flex-direction: column;
   outline: none;
   user-select: none;
+
+  .mtx-clock {
+    align-self: center;
+    width: 80%;
+  }
 }
 
 .mtx-time-input-wrapper {
