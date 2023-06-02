@@ -225,7 +225,8 @@ export class MtxTimeInput implements OnDestroy {
   styleUrls: ['time.scss'],
   exportAs: 'mtxTime',
   host: {
-    class: 'mtx-time',
+    'class': 'mtx-time',
+    '(keypress)': 'handleKeyPress($event)',
   },
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -572,6 +573,12 @@ export class MtxTime<D> implements OnChanges, AfterViewInit, OnDestroy {
 
   handleCancel() {
     this._userSelection.emit();
+  }
+
+  handleKeyPress(event: KeyboardEvent) {
+    if (event?.key === 'Enter') {
+      this.handleOk();
+    }
   }
 
   ngOnDestroy(): void {
