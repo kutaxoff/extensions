@@ -1,22 +1,21 @@
 {
-  "name": "@qoollo/extensions-luxon-adapter",
+  "name": "@erengee/extensions-luxon-adapter",
   "version": "14.1.1",
   "description": "Angular Material Extensions Luxon Adapter",
-  "author": "Qoollo Team",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
   "repository": {
     "type": "git",
-    "url": "https://lab.qoollo.com/frontend/packages/forks/extensions.git"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://nexus.qoollo.com/repository/npm-hosted/"
+    "url": "https://github.com/kutaxoff/extensions.git"
   },
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": "14",
     "@angular/material": "14",
     "@angular/material-luxon-adapter": "14",
-    "@qoollo/extensions": "14",
+    "@erengee/extensions": "14",
     "luxon": ">=2.5.0"
   },
   "dependencies": {

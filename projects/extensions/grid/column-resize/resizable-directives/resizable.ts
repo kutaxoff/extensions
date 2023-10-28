@@ -22,7 +22,7 @@ import {
   ColumnResizeNotifierSource,
   HeaderRowEventDispatcher,
   ResizeStrategy,
-} from '@qoollo/extensions/column-resize';
+} from '@erengee/extensions/column-resize';
 
 import { AbstractMatResizable, RESIZABLE_HOST_BINDINGS, RESIZABLE_INPUTS } from './common';
 

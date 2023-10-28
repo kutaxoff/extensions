@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxButtonModule } from '@qoollo/extensions/button';
+import { MtxButtonModule } from '@erengee/extensions/button';
 
 import { ButtonDemoComponent } from './button-demo.component';
 

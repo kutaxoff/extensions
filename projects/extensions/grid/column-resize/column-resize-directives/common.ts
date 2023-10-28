@@ -13,7 +13,7 @@ import {
   ColumnResizeNotifier,
   ColumnResizeNotifierSource,
   HeaderRowEventDispatcher,
-} from '@qoollo/extensions/column-resize';
+} from '@erengee/extensions/column-resize';
 
 import {
   TABLE_LAYOUT_FIXED_RESIZE_STRATEGY_PROVIDER,

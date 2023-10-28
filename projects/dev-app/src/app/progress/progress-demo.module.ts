@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { MtxProgressModule } from '@qoollo/extensions/progress';
+import { MtxProgressModule } from '@erengee/extensions/progress';
 
 import { ProgressDemoComponent } from './progress-demo.component';
 

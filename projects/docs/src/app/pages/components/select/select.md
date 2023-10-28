@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Select
 
-`import { MtxSelectModule } from '@qoollo/extensions/select';`
+`import { MtxSelectModule } from '@erengee/extensions/select';`
 
 ### APIs
 

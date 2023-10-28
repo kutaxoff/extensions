@@ -26,7 +26,11 @@ import { ThemePalette } from '@angular/material/core';
 import { MAT_INPUT_VALUE_ACCESSOR } from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
 import { Subscription } from 'rxjs';
-import { DatetimeAdapter, MTX_DATETIME_FORMATS, MtxDatetimeFormats } from '@qoollo/extensions/core';
+import {
+  DatetimeAdapter,
+  MTX_DATETIME_FORMATS,
+  MtxDatetimeFormats,
+} from '@erengee/extensions/core';
 import { MtxDatetimepicker } from './datetimepicker';
 import { createMissingDateImplError } from './datetimepicker-errors';
 import { MtxDatetimepickerFilterType } from './datetimepicker-filtertype';

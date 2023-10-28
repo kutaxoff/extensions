@@ -3,7 +3,7 @@ import {
   MtxPopoverPositionEnd,
   MtxPopoverPositionStart,
   MtxPopoverTriggerEvent,
-} from '@qoollo/extensions/popover';
+} from '@erengee/extensions/popover';
 
 @Component({
   selector: 'popover-example',

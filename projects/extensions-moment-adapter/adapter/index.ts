@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatMomentDateModule, MomentDateModule } from '@angular/material-moment-adapter';
-import { DatetimeAdapter, MTX_DATETIME_FORMATS } from '@qoollo/extensions/core';
+import { DatetimeAdapter, MTX_DATETIME_FORMATS } from '@erengee/extensions/core';
 import { MomentDatetimeAdapter } from './moment-datetime-adapter';
 import { MTX_MOMENT_DATETIME_FORMATS } from './moment-datetime-formats';
 

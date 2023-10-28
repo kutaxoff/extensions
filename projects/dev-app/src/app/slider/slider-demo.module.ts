@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxSliderModule } from '@qoollo/extensions/slider';
+import { MtxSliderModule } from '@erengee/extensions/slider';
 
 import { SliderDemoComponent } from './slider-demo.component';
 

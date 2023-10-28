@@ -4,7 +4,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { MtxPipesModule } from '@qoollo/extensions/core';
+import { MtxPipesModule } from '@erengee/extensions/core';
 import { MtxDialogComponent } from './dialog.component';
 import { MtxDialog } from './dialog';
 

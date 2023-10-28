@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Datetimepicker
 
-`import { MtxDatetimepickerModule } from '@qoollo/extensions/datetimepicker';`
+`import { MtxDatetimepickerModule } from '@erengee/extensions/datetimepicker';`
 
 ### Directives
 

@@ -27,11 +27,15 @@ import {
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
-import { DatetimeAdapter, MTX_DATETIME_FORMATS, MtxDatetimeFormats } from '@qoollo/extensions/core';
+import {
+  DatetimeAdapter,
+  MTX_DATETIME_FORMATS,
+  MtxDatetimeFormats,
+} from '@erengee/extensions/core';
 import { MtxClockView } from './clock';
 import { mtxDatetimepickerAnimations } from './datetimepicker-animations';
 import { createMissingDateImplError } from './datetimepicker-errors';
-import { qoollotimepickerFilterType } from './datetimepicker-filtertype';
+import { MtxDatetimepickerFilterType } from './datetimepicker-filtertype';
 import { getActiveOffset, isSameMultiYearView, yearsPerPage, yearsPerRow } from './multi-year-view';
 import { MtxAMPM, MtxCalendarView, MtxDatetimepickerType } from './datetimepicker-types';
 import { MtxDatetimepickerIntl } from './datetimepicker-intl';

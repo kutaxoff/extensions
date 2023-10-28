@@ -12,7 +12,11 @@ import {
 import { createMissingDateImplError } from './datetimepicker-errors';
 import { MtxCalendarCell } from './calendar-body';
 import { mtxDatetimepickerAnimations } from './datetimepicker-animations';
-import { MTX_DATETIME_FORMATS, MtxDatetimeFormats, DatetimeAdapter } from '@qoollo/extensions/core';
+import {
+  MTX_DATETIME_FORMATS,
+  MtxDatetimeFormats,
+  DatetimeAdapter,
+} from '@erengee/extensions/core';
 import { MtxDatetimepickerType } from './datetimepicker-types';
 
 /**

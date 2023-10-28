@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MtxDialog } from '@qoollo/extensions/dialog';
+import { MtxDialog } from '@erengee/extensions/dialog';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
