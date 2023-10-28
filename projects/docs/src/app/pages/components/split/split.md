@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions split
 
-`import { MtxSplitModule } from '@erengee/extensions/split';`
+`import { MtxSplitModule } from '@qoollo/extensions/split';`
 
 ### APIs
 

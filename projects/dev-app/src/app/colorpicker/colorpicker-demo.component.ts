@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
-import { ColorFormat } from '@erengee/extensions/colorpicker';
+import { ColorFormat } from '@qoollo/extensions/colorpicker';
 
 @Component({
   selector: 'dev-colorpicker-demo',

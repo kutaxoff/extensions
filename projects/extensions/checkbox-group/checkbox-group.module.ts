@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-import { MtxPipesModule } from '@erengee/extensions/core';
+import { MtxPipesModule } from '@qoollo/extensions/core';
 import { MtxCheckboxGroupComponent } from './checkbox-group.component';
 
 @NgModule({

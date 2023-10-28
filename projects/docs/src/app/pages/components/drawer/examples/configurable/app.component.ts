@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DrawerPosition, MtxDrawer, MtxDrawerRef } from '@erengee/extensions/drawer';
+import { DrawerPosition, MtxDrawer, MtxDrawerRef } from '@qoollo/extensions/drawer';
 
 @Component({
   selector: 'drawer-example',

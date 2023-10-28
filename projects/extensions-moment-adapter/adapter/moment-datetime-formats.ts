@@ -1,4 +1,4 @@
-import { MtxDatetimeFormats } from '@erengee/extensions/core';
+import { MtxDatetimeFormats } from '@qoollo/extensions/core';
 
 export const MTX_MOMENT_DATETIME_FORMATS: MtxDatetimeFormats = {
   parse: {

@@ -15,7 +15,7 @@ import {
   ResizeStrategy,
   CdkFlexTableResizeStrategy,
   TABLE_LAYOUT_FIXED_RESIZE_STRATEGY_PROVIDER,
-} from '@erengee/extensions/column-resize';
+} from '@qoollo/extensions/column-resize';
 
 export { TABLE_LAYOUT_FIXED_RESIZE_STRATEGY_PROVIDER };
 

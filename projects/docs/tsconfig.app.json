@@ -10,10 +10,10 @@
       "@shared/*": ["app/shared/*"],
       "@assets": ["assets"],
       "@assets/*": ["assets/*"],
-      "@erengee/extensions": ["../../extensions"],
-      "@erengee/extensions/*": ["../../extensions/*"],
-      "@erengee/extensions-moment-adapter": ["../../extensions-moment-adapter"],
-      "@erengee/extensions-moment-adapter/*": ["../../extensions-moment-adapter/*"]
+      "@qoollo/extensions": ["../../extensions"],
+      "@qoollo/extensions/*": ["../../extensions/*"],
+      "@qoollo/extensions-moment-adapter": ["../../extensions-moment-adapter"],
+      "@qoollo/extensions-moment-adapter/*": ["../../extensions-moment-adapter/*"]
     }
   },
   "files": ["src/main.ts", "src/polyfills.ts"],

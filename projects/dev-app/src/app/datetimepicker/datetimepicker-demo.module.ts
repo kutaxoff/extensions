@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MTX_DATETIME_FORMATS } from '@erengee/extensions/core';
-import { MtxDatetimepickerModule } from '@erengee/extensions/datetimepicker';
-import { MtxMomentDatetimeModule } from '@erengee/extensions-moment-adapter';
+import { MTX_DATETIME_FORMATS } from '@qoollo/extensions/core';
+import { MtxDatetimepickerModule } from '@qoollo/extensions/datetimepicker';
+import { MtxMomentDatetimeModule } from '@qoollo/extensions-moment-adapter';
 import {
   MAT_MOMENT_DATE_ADAPTER_OPTIONS,
   MatMomentDateAdapterOptions,

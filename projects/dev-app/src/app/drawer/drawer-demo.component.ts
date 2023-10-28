@@ -4,7 +4,7 @@ import {
   MtxDrawer,
   MtxDrawerRef,
   MTX_DRAWER_DATA,
-} from '@erengee/extensions/drawer';
+} from '@qoollo/extensions/drawer';
 
 @Component({
   selector: 'dev-drawer-demo',

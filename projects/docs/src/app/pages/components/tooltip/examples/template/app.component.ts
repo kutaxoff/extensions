@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UntypedFormControl } from '@angular/forms';
-import { TooltipPosition } from '@erengee/extensions/tooltip';
+import { TooltipPosition } from '@qoollo/extensions/tooltip';
 
 @Component({
   selector: 'tooltip-example',

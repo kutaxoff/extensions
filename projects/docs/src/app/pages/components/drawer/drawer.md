@@ -2,4 +2,4 @@
 
 ## API reference for Material Extensions Drawer
 
-`import { MtxDrawerModule } from '@erengee/extensions/drawer';`
+`import { MtxDrawerModule } from '@qoollo/extensions/drawer';`

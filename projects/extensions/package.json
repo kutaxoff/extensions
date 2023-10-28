@@ -1,14 +1,15 @@
 {
-  "name": "@erengee/extensions",
+  "name": "@qoollo/extensions",
   "version": "14.7.2",
   "description": "Angular Material Extensions",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
+  "author": "Qoollo Team",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kutaxoff/extensions.git"
+    "url": "https://lab.qoollo.com/frontend/packages/forks/extensions.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://nexus.qoollo.com/repository/npm-hosted/"
   },
   "keywords": [
     "angular",
@@ -16,7 +17,6 @@
     "angular-components",
     "angular-material-extensions",
     "ng-matero",
-    "erengee",
     "data-grid",
     "ngx-data-grid",
     "material-data-table",
@@ -31,10 +31,6 @@
     "datetimepicker"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kutaxoff/extensions/issues"
-  },
-  "homepage": "https://ng-matero.github.io/extensions/",
   "exports": {
     ".": {
       "sass": "./_index.scss"

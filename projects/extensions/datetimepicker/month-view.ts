@@ -9,11 +9,7 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
-import {
-  MTX_DATETIME_FORMATS,
-  MtxDatetimeFormats,
-  DatetimeAdapter,
-} from '@erengee/extensions/core';
+import { MTX_DATETIME_FORMATS, MtxDatetimeFormats, DatetimeAdapter } from '@qoollo/extensions/core';
 import { MtxCalendarCell } from './calendar-body';
 import { mtxDatetimepickerAnimations } from './datetimepicker-animations';
 import { createMissingDateImplError } from './datetimepicker-errors';

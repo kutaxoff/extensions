@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { MtxText3dModule } from '@erengee/extensions/text3d';
+import { MtxText3dModule } from '@qoollo/extensions/text3d';
 
 import { Text3dDemoComponent } from './text3d-demo.component';
 

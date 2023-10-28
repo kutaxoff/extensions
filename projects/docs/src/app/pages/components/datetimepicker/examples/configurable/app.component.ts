@@ -4,8 +4,8 @@ import {
   MtxCalendarView,
   MtxDatetimepickerMode,
   MtxDatetimepickerType,
-} from '@erengee/extensions/datetimepicker';
-import { MTX_DATETIME_FORMATS } from '@erengee/extensions/core';
+} from '@qoollo/extensions/datetimepicker';
+import { MTX_DATETIME_FORMATS } from '@qoollo/extensions/core';
 
 @Component({
   selector: 'datetimepicker-example',

@@ -4,7 +4,7 @@ import {
   MAT_MOMENT_DATE_ADAPTER_OPTIONS,
   MatMomentDateAdapterOptions,
 } from '@angular/material-moment-adapter';
-import { DatetimeAdapter } from '@erengee/extensions/core';
+import { DatetimeAdapter } from '@qoollo/extensions/core';
 
 import * as _moment from 'moment';
 import { Moment } from 'moment';

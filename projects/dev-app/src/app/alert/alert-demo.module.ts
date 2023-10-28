@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxAlertModule } from '@erengee/extensions/alert';
+import { MtxAlertModule } from '@qoollo/extensions/alert';
 
 import { AlertDemoComponent } from './alert-demo.component';
 

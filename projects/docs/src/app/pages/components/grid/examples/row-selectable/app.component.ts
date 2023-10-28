@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EXAMPLE_DATA } from '../../data';
-import { MtxGridColumn, MtxGridRowSelectionFormatter } from '@erengee/extensions/grid';
+import { MtxGridColumn, MtxGridRowSelectionFormatter } from '@qoollo/extensions/grid';
 
 @Component({
   selector: 'data-grid-example',

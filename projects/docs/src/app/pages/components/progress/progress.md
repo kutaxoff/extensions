@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Progress
 
-`import { MtxProgressModule } from '@erengee/extensions/progress';`
+`import { MtxProgressModule } from '@qoollo/extensions/progress';`
 
 ### Directives
 

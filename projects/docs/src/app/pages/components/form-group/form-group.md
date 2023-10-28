@@ -2,4 +2,4 @@
 
 ## API reference for Material Extensions Form Group
 
-`import { MtxFormGroupModule } from '@erengee/extensions/form-group';`
+`import { MtxFormGroupModule } from '@qoollo/extensions/form-group';`

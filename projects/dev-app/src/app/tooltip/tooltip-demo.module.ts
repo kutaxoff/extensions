@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxTooltipModule } from '@erengee/extensions/tooltip';
+import { MtxTooltipModule } from '@qoollo/extensions/tooltip';
 
 import { TooltipDemoComponent } from './tooltip-demo.component';
 

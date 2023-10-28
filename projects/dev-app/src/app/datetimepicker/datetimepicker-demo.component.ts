@@ -4,7 +4,7 @@ import { DateAdapter } from '@angular/material/core';
 import { TranslateService } from '@ngx-translate/core';
 import * as moment from 'moment';
 import { Subscription } from 'rxjs';
-import { MtxDatetimepickerFilterType } from '@erengee/extensions/datetimepicker';
+import { MtxDatetimepickerFilterType } from '@qoollo/extensions/datetimepicker';
 
 @Component({
   selector: 'dev-datetimepicker-demo',

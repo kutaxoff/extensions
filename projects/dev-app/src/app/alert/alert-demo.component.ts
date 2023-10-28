@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MtxAlertType } from '@erengee/extensions/alert';
+import { MtxAlertType } from '@qoollo/extensions/alert';
 
 @Component({
   selector: 'dev-alert-demo',

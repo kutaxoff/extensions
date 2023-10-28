@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions checkbox-group
 
-`import { MtxCheckboxGroupModule } from '@erengee/extensions/checkbox-group';`
+`import { MtxCheckboxGroupModule } from '@qoollo/extensions/checkbox-group';`
 
 ### Directives
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MtxGridColumn } from '@erengee/extensions/grid';
+import { MtxGridColumn } from '@qoollo/extensions/grid';
 
 @Component({
   selector: 'data-grid-example',

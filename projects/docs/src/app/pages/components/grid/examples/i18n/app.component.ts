@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EXAMPLE_DATA } from '../../data';
-import { MtxGridColumn, MtxGridColumnPinOption } from '@erengee/extensions/grid';
+import { MtxGridColumn, MtxGridColumnPinOption } from '@qoollo/extensions/grid';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

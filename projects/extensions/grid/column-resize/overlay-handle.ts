@@ -27,7 +27,7 @@ import {
   HeaderRowEventDispatcher,
   ResizeOverlayHandle,
   ResizeRef,
-} from '@erengee/extensions/column-resize';
+} from '@qoollo/extensions/column-resize';
 
 import { AbstractMatColumnResize } from './column-resize-directives/common';
 

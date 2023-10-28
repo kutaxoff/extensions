@@ -1,21 +1,22 @@
 {
-  "name": "@erengee/extensions-moment-adapter",
+  "name": "@qoollo/extensions-moment-adapter",
   "version": "14.1.1",
   "description": "Angular Material Extensions Moment Adapter",
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "Valentin Katyshev <kutaxoff@icloud.com>",
+  "author": "Qoollo Team",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kutaxoff/extensions.git"
+    "url": "https://lab.qoollo.com/frontend/packages/forks/extensions.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://nexus.qoollo.com/repository/npm-hosted/"
   },
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": "14",
     "@angular/material": "14",
     "@angular/material-moment-adapter": "14",
-    "@erengee/extensions": "14",
+    "@qoollo/extensions": "14",
     "moment": "^2.29.3"
   },
   "dependencies": {

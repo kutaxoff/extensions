@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions grid
 
-`import { MtxGridModule } from '@erengee/extensions/grid';`
+`import { MtxGridModule } from '@qoollo/extensions/grid';`
 
 ### Directives
 

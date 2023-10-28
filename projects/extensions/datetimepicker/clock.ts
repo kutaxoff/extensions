@@ -16,7 +16,7 @@ import {
   SimpleChanges,
   ViewEncapsulation,
 } from '@angular/core';
-import { DatetimeAdapter } from '@erengee/extensions/core';
+import { DatetimeAdapter } from '@qoolloxtensions/core';
 import { MtxDatetimepickerFilterType } from './datetimepicker-filtertype';
 import { MtxAMPM } from './datetimepicker-types';
 

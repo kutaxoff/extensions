@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MtxDialog } from '@erengee/extensions/dialog';
+import { MtxDialog } from '@qoollo/extensions/dialog';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({

@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Tooltip
 
-`import { MtxTooltipModule } from '@erengee/extensions/tooltip';`
+`import { MtxTooltipModule } from '@qoollo/extensions/tooltip';`
 
 ### APIs
 

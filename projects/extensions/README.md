@@ -19,7 +19,7 @@ At first, you should install the Angular Material and setup it. [Learn more abou
 Install the Extensions library:
 
 ```bash
-$ npm install @erengee/extensions --save
+$ npm install @qoollo/extensions --save
 ```
 
 ## Setup
@@ -27,8 +27,8 @@ $ npm install @erengee/extensions --save
 Import the modules you need, e.g. data-grid and select.
 
 ```ts
-import { MtxGridModule } from '@erengee/extensions/grid';
-import { MtxSelectModule } from '@erengee/extensions/select';
+import { MtxGridModule } from '@qoollo/extensions/grid';
+import { MtxSelectModule } from '@qoollo/extensions/select';
 
 @NgModule({
   ...
@@ -44,7 +44,7 @@ export class YourAppModule {
 After import modules, you must define a theme. [More details about theming](https://material.angular.io/guide/theming).
 
 ```scss
-@use '@erengee/extensions' as mtx;
+@use '@qoollo/extensions' as mtx;
 
 @include mtx.all-component-themes($theme);
 @include mtx.all-experimental-component-themes($theme);
