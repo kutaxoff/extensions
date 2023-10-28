@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxPopoverModule } from '@qoollo/extensions/popover';
+import { MtxPopoverModule } from '@erengee/extensions/popover';
 
 import { PopoverDemoComponent } from './popover-demo.component';
 

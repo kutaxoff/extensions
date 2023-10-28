@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MtxGridColumn } from '@qoollo/extensions/grid';
+import { MtxGridColumn } from '@erengee/extensions/grid';
 import { PageEvent } from '@angular/material/paginator';
 import { HttpClient } from '@angular/common/http';
 

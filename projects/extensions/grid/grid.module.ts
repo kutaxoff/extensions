@@ -15,8 +15,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMenuModule } from '@angular/material/menu';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
-import { MtxPipesModule } from '@qoollo/extensions/core';
-import { MtxDialogModule } from '@qoollo/extensions/dialog';
+import { MtxPipesModule } from '@erengee/extensions/core';
+import { MtxDialogModule } from '@erengee/extensions/dialog';
 import { MtxGridCellSelectionDirective, MtxGridComponent } from './grid.component';
 import { MtxGridCellComponent } from './cell.component';
 import { MtxGridColumnMenuComponent } from './column-menu.component';

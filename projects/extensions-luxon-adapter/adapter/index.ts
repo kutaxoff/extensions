@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { LuxonDateModule, MatLuxonDateModule } from '@angular/material-luxon-adapter';
-import { DatetimeAdapter, MTX_DATETIME_FORMATS } from '@qoollo/extensions/core';
+import { DatetimeAdapter, MTX_DATETIME_FORMATS } from '@erengee/extensions/core';
 import { LuxonDatetimeAdapter } from './luxon-datetime-adapter';
 import { MTX_LUXON_DATETIME_FORMATS } from './luxon-datetime-formats';
 

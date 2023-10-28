@@ -3,8 +3,8 @@
   "compilerOptions": {
     "declarationMap": false,
     "paths": {
-      "@qoollo/extensions": ["dist/extensions"],
-      "@qoollo/extensions/*": ["dist/extensions/*"]
+      "@erengee/extensions": ["dist/extensions"],
+      "@erengee/extensions/*": ["dist/extensions/*"]
     }
   },
   "angularCompilerOptions": {

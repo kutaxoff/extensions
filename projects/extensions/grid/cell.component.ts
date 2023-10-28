@@ -13,7 +13,7 @@ import {
   Output,
   ViewEncapsulation,
 } from '@angular/core';
-import { MtxDialog } from '@qoollo/extensions/dialog';
+import { MtxDialog } from '@erengee/extensions/dialog';
 import { MtxGridColumn, MtxGridColumnButton } from './grid.interface';
 import { MtxGridService } from './grid.service';
 import PhotoViewer from 'photoviewer';

@@ -7,7 +7,7 @@
  */
 
 import { Type } from '@angular/core';
-import { Resizable } from '@qoollo/extensions/column-resize';
+import { Resizable } from '@erengee/extensions/column-resize';
 import { MatColumnResizeOverlayHandle } from '../overlay-handle';
 
 export abstract class AbstractMatResizable extends Resizable<MatColumnResizeOverlayHandle> {

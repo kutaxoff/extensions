@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MtxDialog } from '@qoolloxtensions/dialog';
+import { MtxDialog } from '@erengee/extensions/dialog';
 
 @Component({
   selector: 'dialog-example',

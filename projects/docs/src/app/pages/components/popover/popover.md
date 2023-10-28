@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Popover
 
-`import { MtxPopoverModule } from '@qoollo/extensions/popover';`
+`import { MtxPopoverModule } from '@erengee/extensions/popover';`
 
 ### Directives
 

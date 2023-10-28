@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared.module';
 
-import { MtxLoaderModule } from '@qoollo/extensions/loader';
+import { MtxLoaderModule } from '@erengee/extensions/loader';
 
 import { LoaderDemoComponent } from './loader-demo.component';
 

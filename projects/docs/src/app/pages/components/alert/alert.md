@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Alert
 
-`import { MtxAlertModule } from '@qoollo/extensions/alert';`
+`import { MtxAlertModule } from '@erengee/extensions/alert';`
 
 ### Directives
 

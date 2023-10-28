@@ -2,7 +2,7 @@
 
 ## API reference for Material Extensions Dialog
 
-`import { MtxDialogModule } from '@qoollo/extensions/dialog';`
+`import { MtxDialogModule } from '@erengee/extensions/dialog';`
 
 ### Services
 

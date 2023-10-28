@@ -3,7 +3,7 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatCommonModule } from '@angular/material/core';
-import { MtxPipesModule } from '@qoollo/extensions/core';
+import { MtxPipesModule } from '@erengee/extensions/core';
 import { CdkScrollableModule } from '@angular/cdk/scrolling';
 import {
   MtxTooltip,

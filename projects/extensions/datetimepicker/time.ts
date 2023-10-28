@@ -21,7 +21,7 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import { DatetimeAdapter } from '@qoollo/extensions/core';
+import { DatetimeAdapter } from '@erengee/extensions/core';
 import { SubscriptionLike } from 'rxjs';
 import { MtxClockView } from './clock';
 import { MtxDatetimepickerFilterType } from './datetimepicker-filtertype';
